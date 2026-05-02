@@ -7,6 +7,11 @@ import { CaesarCipher } from "@/components/tools/CaesarCipher";
 import { IpLookup } from "@/components/tools/IpLookup";
 import { UrlScanner } from "@/components/tools/UrlScanner";
 import { PortScanner } from "@/components/tools/PortScanner";
+import { EncoderDecoder } from "@/components/tools/EncoderDecoder";
+import { PasswordGenerator } from "@/components/tools/PasswordGenerator";
+import { JwtDecoder } from "@/components/tools/JwtDecoder";
+import { SubdomainFinder } from "@/components/tools/SubdomainFinder";
+import { DnsLookup } from "@/components/tools/DnsLookup";
 
 function App() {
   const [activeTool, setActiveTool] = useState("password");
@@ -27,6 +32,16 @@ function App() {
         return <UrlScanner />;
       case "port":
         return <PortScanner />;
+      case "encoder":
+        return <EncoderDecoder />;
+      case "passgen":
+        return <PasswordGenerator />;
+      case "jwt":
+        return <JwtDecoder />;
+      case "subdomain":
+        return <SubdomainFinder />;
+      case "dns":
+        return <DnsLookup />;
       default:
         return <PasswordChecker />;
     }
