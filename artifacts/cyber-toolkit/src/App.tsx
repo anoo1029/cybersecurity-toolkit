@@ -12,6 +12,7 @@ import { PasswordGenerator } from "@/components/tools/PasswordGenerator";
 import { JwtDecoder } from "@/components/tools/JwtDecoder";
 import { SubdomainFinder } from "@/components/tools/SubdomainFinder";
 import { DnsLookup } from "@/components/tools/DnsLookup";
+import { WhoisLookup } from "@/components/tools/WhoisLookup";
 
 function App() {
   const [activeTool, setActiveTool] = useState("password");
@@ -42,6 +43,8 @@ function App() {
         return <SubdomainFinder />;
       case "dns":
         return <DnsLookup />;
+      case "whois":
+        return <WhoisLookup />;
       default:
         return <PasswordChecker />;
     }
