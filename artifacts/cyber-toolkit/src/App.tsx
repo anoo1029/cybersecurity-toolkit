@@ -6,6 +6,7 @@ import { HashIdentifier } from "@/components/tools/HashIdentifier";
 import { CaesarCipher } from "@/components/tools/CaesarCipher";
 import { IpLookup } from "@/components/tools/IpLookup";
 import { UrlScanner } from "@/components/tools/UrlScanner";
+import { PortScanner } from "@/components/tools/PortScanner";
 
 function App() {
   const [activeTool, setActiveTool] = useState("password");
@@ -24,6 +25,8 @@ function App() {
         return <IpLookup />;
       case "url":
         return <UrlScanner />;
+      case "port":
+        return <PortScanner />;
       default:
         return <PasswordChecker />;
     }

@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Terminal, Shield, Mail, Hash, KeyRound, Globe, Link as LinkIcon } from "lucide-react";
+import { Terminal, Shield, Mail, Hash, KeyRound, Globe, Link as LinkIcon, Radio } from "lucide-react";
 
 interface LayoutProps {
   children: ReactNode;
@@ -14,6 +14,7 @@ const TOOLS = [
   { id: "cipher", name: "Caesar Cipher", icon: KeyRound },
   { id: "ip", name: "IP Lookup", icon: Globe },
   { id: "url", name: "URL Scanner", icon: LinkIcon },
+  { id: "port", name: "Port Scanner", icon: Radio },
 ];
 
 export function Layout({ children, activeTool, setActiveTool }: LayoutProps) {
